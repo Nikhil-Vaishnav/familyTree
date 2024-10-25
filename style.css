@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align items at the start */
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(179, 102, 102);
+}
+
+h1 {
+    font-size: 2.5em; /* Responsive font size */
+    color: maroon;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#main {
+    text-align: center;
+    position: relative;
+    width: 100%; /* Make the main container full width */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 50px; /* Adjust for spacing */
+    position: relative;
+}
+
+ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 2px solid #ccc;
+    height: 100%;
+    transform: translateX(-25px);
+}
+
+li {
+    padding: 10px;
+    position: relative;
+    margin-left: -20px;
+    color: red; /* Change this color to your preferred color */
+}
+
+li::before,
+li::after {
+    content: '';
+    position: absolute;
+    border-top: 2px solid #ccc;
+    top: 0;
+    width: 25px;
+    height: 2px;
+}
+
+li::before {
+    left: -25px;
+}
+
+li::after {
+    right: 100%;
+    transform: translateX(50px);
+}
+
+li div {
+    font-size: 1em;
+    padding: 8px 12px;
+    background: #e0f7fa; /* Change background color */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.children {
+    display: none;
+    padding-left: 20px;
+}
+
+.expandable {
+    cursor: pointer;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.expandable:hover {
+    color: #004a99;
+}
+
+/* Responsive image styles */
+.bs {
+    width: 100px; /* Set the width of images */
+    height: 120px; /* Maintain aspect ratio */
+    border-radius: 10%; /* Make images circular */
+    margin-top: 5px; /* Space above images */
+    border: solid black 2px;
+    margin-left: 2rem;
+}
+
+.sd {
+    width: 100px; /* Set the width of images */
+    height: 100px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make images circular */
+    margin-top: 5px; /* Space above images */
+    border: solid blue 2px;
+}
+
+/* Parents' name color */
+.parentsName {
+    color: purple;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2em; /* Smaller font size for tablets */
+    }
+
+    li {
+        font-size: 0.9em; /* Smaller font size for list items */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .bs, .sd {
+        width: 80px; /* Reduce width of images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    ul {
+        padding-left: 30px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5em; /* Even smaller font size for mobile */
+    }
+
+    li {
+        font-size: 0.8em; /* Further reduce list item font size */
+        padding: 6px; /* Adjust padding */
+    }
+
+    .bs, .sd {
+        width: 60px; /* Further reduce width of images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    ul {
+        padding-left: 20px; /* Adjust padding for mobile */
+    }
+}
