@@ -14,7 +14,8 @@ body {
     padding: 20px;
     background-color: #f8f8f8;
 }
-p{
+
+p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(179, 102, 102);
 }
@@ -161,5 +162,29 @@ li div {
 
     ul {
         padding-left: 20px; /* Adjust padding for mobile */
+    }
+
+    body {
+        padding: 10px; /* Reduce overall padding */
+    }
+
+    #main {
+        padding: 10px; /* Add padding to main */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2em; /* Smaller font size for very small devices */
+    }
+
+    li {
+        font-size: 0.7em; /* Further reduce list item font size */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .bs, .sd {
+        width: 50px; /* Further reduce width of images */
+        height: auto; /* Maintain aspect ratio */
     }
 }
