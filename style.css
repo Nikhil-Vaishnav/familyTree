@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,35 +8,38 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: flex-start; /* Align items at the start */
-    min-height: 100vh; /* Full height of the viewport */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
     padding: 20px;
     background-color: #f8f8f8;
 }
 
-p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(179, 102, 102);
-}
-
 h1 {
-    font-size: 2.5em; /* Responsive font size */
+    font-size: 2.5em;
     color: maroon;
     margin-bottom: 20px;
     text-align: center;
 }
 
-#main {
-    text-align: center;
-    position: relative;
-    width: 100%; /* Make the main container full width */
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(179, 102, 102);
+    margin-bottom: 10px;
 }
 
+#main {
+    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Set a max-width for larger screens */
+    padding: 10px;
+}
+
+/* Tree Structure */
 ul {
     list-style-type: none;
-    padding-left: 50px; /* Adjust for spacing */
+    padding-left: 50px;
     position: relative;
 }
 
@@ -53,7 +57,7 @@ li {
     padding: 10px;
     position: relative;
     margin-left: -20px;
-    color: red; /* Change this color to your preferred color */
+    color: red;
 }
 
 li::before,
@@ -75,22 +79,7 @@ li::after {
     transform: translateX(50px);
 }
 
-li div {
-    font-size: 1em;
-    padding: 8px 12px;
-    background: #e0f7fa; /* Change background color */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    white-space: nowrap;
-}
-
-.children {
-    display: none;
-    padding-left: 20px;
-}
-
+/* Expandable Items */
 .expandable {
     cursor: pointer;
     color: #0066cc;
@@ -101,90 +90,80 @@ li div {
     color: #004a99;
 }
 
-/* Responsive image styles */
+.children {
+    display: none;
+    padding-left: 20px;
+}
+
+/* Image Styling */
+.bs, .sd {
+    width: 100px;
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+    object-fit: cover; /* Crop images if they exceed the box */
+    margin-top: 5px;
+    border: 2px solid;
+    height: 150px;
+}
+
 .bs {
-    width: 100px; /* Set the width of images */
-    height: 120px; /* Maintain aspect ratio */
-    border-radius: 10%; /* Make images circular */
-    margin-top: 5px; /* Space above images */
-    border: solid black 2px;
-    margin-left: 2rem;
+    border-radius: 10%; /* Rounded corners for parent images */
+    border-color: black;
+    margin-left: 1.5rem;
 }
 
 .sd {
-    width: 100px; /* Set the width of images */
-    height: 100px; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make images circular */
-    margin-top: 5px; /* Space above images */
-    border: solid blue 2px;
+    border-radius: 50%; /* Circular images for child images */
+    border-color: blue;
 }
 
-/* Parents' name color */
+/* Parent Names */
 .parentsName {
     color: purple;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Design */
 @media (max-width: 800px) {
     h1 {
-        font-size: 2em; /* Smaller font size for tablets */
-    }
-
-    li {
-        font-size: 0.9em; /* Smaller font size for list items */
-        padding: 8px; /* Adjust padding */
+        font-size: 2em; /* Slightly smaller for tablets */
     }
 
     .bs, .sd {
-        width: 80px; /* Reduce width of images */
-        height: auto; /* Maintain aspect ratio */
+        width: 80px; /* Smaller images for tablets */
     }
 
     ul {
-        padding-left: 30px; /* Adjust padding */
+        padding-left: 30px;
     }
 }
 
 @media (max-width: 500px) {
     h1 {
-        font-size: 1.5em; /* Even smaller font size for mobile */
+        font-size: 1.5em; /* Smaller font size for mobile */
     }
 
     li {
-        font-size: 0.8em; /* Further reduce list item font size */
-        padding: 6px; /* Adjust padding */
+        font-size: 0.9em;
     }
 
     .bs, .sd {
-        width: 60px; /* Further reduce width of images */
-        height: auto; /* Maintain aspect ratio */
+        width: 60px; /* Further reduce image size for mobile */
     }
 
     ul {
-        padding-left: 20px; /* Adjust padding for mobile */
-    }
-
-    body {
-        padding: 10px; /* Reduce overall padding */
-    }
-
-    #main {
-        padding: 10px; /* Add padding to main */
+        padding-left: 20px;
     }
 }
 
 @media (max-width: 400px) {
     h1 {
-        font-size: 1.2em; /* Smaller font size for very small devices */
+        font-size: 1.2em; /* Smallest font size for small devices */
     }
 
     li {
-        font-size: 0.7em; /* Further reduce list item font size */
-        padding: 5px; /* Adjust padding */
+        font-size: 0.8em;
     }
 
     .bs, .sd {
-        width: 50px; /* Further reduce width of images */
-        height: auto; /* Maintain aspect ratio */
+        width: 50px; /* Smallest image size for very small screens */
     }
 }
