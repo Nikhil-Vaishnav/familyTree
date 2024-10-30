@@ -21,8 +21,15 @@ h1 {
     color: maroon;
     margin-bottom: 20px;
     text-align: center;
+    
+   
 }
 
+#firstName:hover{
+    box-shadow: 5px 5px 10px black ;/*used for the box shadow on the h1*/
+    border-radius: 5px;   
+    border: solid #004a99 1.5px;
+}
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(179, 102, 102);
