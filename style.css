@@ -34,6 +34,7 @@ h1 {
     box-shadow: 5px 5px 10px gray ;/*used for the box shadow on the h1*/
     border-radius: 5px;   
     border: solid #004a99 2px;
+    transition: 0.5s;
     /* background-color: antiquewhite   ; */
 }
 #firstName:hover{
@@ -124,7 +125,24 @@ li::after {
     margin-top: 5px;
     border: 2px solid;
 }
-
+.sd:hover{
+    width: 130px;
+    height: 150px; /* Fixed height for consistency */
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+    object-fit: cover; /* Crop images if they exceed the box */
+    margin-top: 5px;
+    border: 2px solid;
+    box-shadow: 16px 10px 15px black;
+}
+.bs:hover{
+    width: 105px;
+    height: 150px; /* Fixed height for consistency */
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+    object-fit: cover; /* Crop images if they exceed the box */
+    margin-top: px;
+    border: 2px solid ;
+    box-shadow: 10px 10px 15px black;
+}
 .bs {
     border-radius: 10%; /* Rounded corners for parent images */
     border-color: black;
@@ -139,6 +157,10 @@ li::after {
 /* Parent Names */
 .parentsName {
     color: purple;
+}
+
+img:hover{
+
 }
 
 /* Responsive Design */
