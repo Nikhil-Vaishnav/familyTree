@@ -25,7 +25,7 @@ h1 {
    
 }
 
-#firstName:hover{
+#firstName{
     box-shadow: 5px 5px 10px black ;/*used for the box shadow on the h1*/
     border-radius: 5px;   
     border: solid #004a99 1.5px;
