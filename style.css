@@ -157,7 +157,7 @@ li::after {
 /* Parent Names */
 .parentsName {
     color: purple;
-};
+}
 /* Responsive Design */
 @media (max-width: 800px) {
     h1 {
